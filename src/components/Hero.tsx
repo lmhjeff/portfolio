@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { urlFor } from '../../sanity'
+import { PageInfo } from '../../typings'
 import BackgroundCircles from './BackgroundCircles'
 
-const Hero = () => {
+type Props = {
+    pageInfo: PageInfo
+}
+
+const Hero = ({ pageInfo }: Props) => {
     const [text, count] = useTypewriter({
-        words: ['Hi, The Name is Jeff Lam', 'Guy-who-loves-Coffee.tsx', '<ButLovesToCodeMore />'],
+        words: [`Hi, The Name is ${pageInfo.name}`, 'Guy-who-loves-Coffee.tsx', '<ButLovesToCodeMore />'],
         loop: true,
         delaySpeed: 2000,
     })
@@ -13,11 +19,11 @@ const Hero = () => {
             <BackgroundCircles />
             <img
                 className="relative rounded-full h-32 w-32 mx-auto object-cover"
-                src="https://media.istockphoto.com/photos/building-in-shape-of-smiling-emoji-blinking-with-tongue-out-in-the-picture-id1313673729?k=20&m=1313673729&s=612x612&w=0&h=z7UPgjyUfaUMMhy4aCNF7_Doci3NC46iPfn97uFhoEY="
+                src={urlFor(pageInfo?.heroImage).url()}
                 alt=""
             />
             <div className="z-20">
-                <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">Software Engineer</h2>
+                <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">{pageInfo.role}</h2>
                 <h1 className="text-5xl lg:text-6xl font-semibold scroll-px-10">
                     <span>{text}</span>
                     <Cursor cursorColor="#048a81" />
@@ -43,4 +49,11 @@ const Hero = () => {
 }
 
 export default Hero
+
+
+
+
+
+
+
 

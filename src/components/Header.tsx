@@ -1,8 +1,13 @@
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { Social } from '../../typings'
 
-const Header = () => {
+type Props = {
+    socials: Social[]
+}
+
+const Header = ({ socials }: Props) => {
     return (
         <header className="sticky top-0 p-5 flex flex-row items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
             <motion.div
@@ -19,13 +24,16 @@ const Header = () => {
                 transition={{
                     duration: 1,
                 }}>
-                <SocialIcon
-                    url="https://linkedin.com/in/lmhjeff"
-                    fgColor="gray"
-                    bgColor="transparent"
-                    target="_blank"
-                    className="cursor-pointer"
-                />
+                {socials?.map((social) => (
+                    <SocialIcon
+                        key={social._id}
+                        url={social.url}
+                        fgColor="gray"
+                        bgColor="transparent"
+                        target="_blank"
+                        className="cursor-pointer"
+                    />
+                ))}
             </motion.div>
             <Link href="#contact">
                 <motion.div
@@ -58,6 +66,11 @@ const Header = () => {
 }
 
 export default Header
+
+
+
+
+
 
 
 
