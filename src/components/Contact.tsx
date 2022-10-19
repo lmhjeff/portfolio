@@ -9,7 +9,7 @@ type Inputs = {
     message: string
 }
 
-const Contact = ({}: Props) => {
+const Contact = () => {
     const { register, handleSubmit } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         window.location.href = `mailto:lmh.jeff@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`
@@ -48,4 +48,5 @@ const Contact = ({}: Props) => {
 }
 
 export default Contact
+
 
