@@ -20,7 +20,7 @@ const Contact = () => {
             <h3 className="absolute top-12 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Contact</h3>
             <div className="flex flex-col space-y-10 items-center">
                 <h4 className="text-4xl font-semibold text-center">
-                    I have just what you need. <span className="decoration-[#06d6a0] underline">Let's Talk.</span>
+                    I have got just what you need. <span className="decoration-[#06d6a0] underline">Let's Talk.</span>
                 </h4>
                 <div className="space-y-10">
                     <div className="flex items-center space-x-5 justify-center">
@@ -48,6 +48,7 @@ const Contact = () => {
 }
 
 export default Contact
+
 
 
 
