@@ -4,9 +4,9 @@ import { sanityClient } from '../../../sanity'
 import { Project } from '../../../typings'
 
 const query = groq`
-    *[_type=='project'] {
+    *[_type=='project'] | order(_createdAt asc) {
         ...,
-        technologies[]
+        technologies[] ->
     }
 `
 
@@ -19,4 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     res.status(200).json({ projects })
 }
+
+
 

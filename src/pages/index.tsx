@@ -63,7 +63,7 @@ const Home = ({ pageInfo, experiences, socials, skills, projects }: Props) => {
 
             {/* project */}
             <section id="projects" className="snap-start">
-                <Projects />
+                <Projects projects={projects} />
             </section>
 
             {/* contact me */}
@@ -102,4 +102,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         revalidate: 10,
     }
 }
+
 

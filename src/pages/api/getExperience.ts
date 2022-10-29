@@ -4,9 +4,9 @@ import { sanityClient } from '../../../sanity'
 import { Experience } from '../../../typings'
 
 const query = groq`
-    *[_type=='experience'] {
+    *[_type=='experience'] | order(_createdAt asc) {
         ...,
-        technologies[]
+        technologies[] ->
     }
 `
 
@@ -17,6 +17,9 @@ type Data = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
     const experiences: Experience[] = await sanityClient.fetch(query)
 
-    res.status(200).json({ experiences })
+    return res.status(200).json({ experiences })
 }
+
+
+
 
