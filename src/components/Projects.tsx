@@ -45,7 +45,7 @@ const Projects = ({ projects }: Props) => {
                                 }}
                                 viewport={{ once: true }}
                                 src={urlFor(project?.image).url()}
-                                className="lg:max-w-[1200px] w-full bg-cover"
+                                className="lg:max-w-[1200px] w-full object-cover"
                             />
                             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                                 <h4 className="text-4xl font-semibold text-center">
@@ -67,7 +67,9 @@ const Projects = ({ projects }: Props) => {
                                             ),
                                     )}
                                 </div>
-                                <p className="text-lg text-center md:text-left">{project.summary}</p>
+                                <p className="text-lg text-center md:text-left h-80  overflow-y-scroll scrollbar-none">
+                                    {project.summary}
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -79,6 +81,23 @@ const Projects = ({ projects }: Props) => {
 }
 
 export default Projects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
