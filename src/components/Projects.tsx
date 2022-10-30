@@ -25,7 +25,7 @@ const Projects = ({ projects }: Props) => {
                 className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory 
             z-20 scrollbar-thin scroll-track-gray-400/20 scrollbar-thumb-[#048a81] cursor-pointer">
                 {projects.map((project, id) => (
-                    <a href={project.linkToBuild} target="_blank">
+                    <a href={project.linkToBuild} target="_blank" key={project._id} rel="noreferrer">
                         <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center px-16 pt-48 pb-20 md:p-44 h-screen">
                             <motion.img
                                 initial={{
@@ -77,6 +77,9 @@ const Projects = ({ projects }: Props) => {
 }
 
 export default Projects
+
+
+
 
 
 
