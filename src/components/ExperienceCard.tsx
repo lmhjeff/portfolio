@@ -12,20 +12,20 @@ const ExperienceCard = ({ experience }: Props) => {
         experience.technologies.map((tech) => console.log(tech.image)),
     )
     return (
-        <article className="snap-center bg-[#292929] p-10 flex flex-col rounded-l items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] cursor-pointer transition-opacity duration-200 opacity-40 hover:opacity-100">
+        <article className="md:snap-center bg-[#292929] h-full md:p-10 flex flex-col rounded-l items-center space-y-5 flex-shrink-0 w-[300px] sm:w-[500px] md:w-[600px] xl:w-[900px] cursor-pointer transition-opacity duration-200 opacity-40 hover:opacity-100">
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-contain object-center"
+                className="w-28 h-28 md:w-32 md:h-32 rounded-full xl:w-[200px] xl:h-[200px] object-contain object-center"
                 src={urlFor(experience?.companyImage).url()}
             />
 
-            <div className="px-0 md:px-10">
+            <div className="px-3 md:px-10 flex flex-col items-start">
                 <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
                 <p className="font-bold text-2xl mt-1">{experience.company}</p>
-                <div className="flex my-2 space-x-2">
+                <div className="flex flex-row flex-wrap my-2 space-x-2 ">
                     {experience.technologies.map(
                         (tech) =>
                             tech.image && (
@@ -49,6 +49,45 @@ const ExperienceCard = ({ experience }: Props) => {
 }
 
 export default ExperienceCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
