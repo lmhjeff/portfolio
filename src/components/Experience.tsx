@@ -22,7 +22,7 @@ const WorkExperience = ({ experiences }: Props) => {
             justify-evenly mex-auto items-center">
             <h3 className="absolute top-0 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Experience</h3>
 
-            <div className="w-full flex space-x-5 overflow-x-scroll p-0 md:p-10 snap-x snap-mandatory scrollbar-thin scroll-track-gray-400/20 scrollbar-thumb-[#048a81]">
+            <div className="w-full mt-12 md:mt-0 flex space-x-5 overflow-x-scroll p-0 md:p-10 snap-x snap-mandatory scrollbar-thin scroll-track-gray-400/20 scrollbar-thumb-[#048a81]">
                 {experiences.map((experience) => (
                     <ExperienceCard key={experience._id} experience={experience} />
                 ))}
@@ -32,6 +32,11 @@ const WorkExperience = ({ experiences }: Props) => {
 }
 
 export default WorkExperience
+
+
+
+
+
 
 
 

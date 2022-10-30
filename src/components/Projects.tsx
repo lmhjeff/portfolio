@@ -8,10 +8,6 @@ type Props = {
 }
 
 const Projects = ({ projects }: Props) => {
-    // const projects = [1, 2, 3, 4, 5]
-
-    console.log('projects', projects)
-
     return (
         <motion.div
             initial={{
@@ -81,6 +77,7 @@ const Projects = ({ projects }: Props) => {
 }
 
 export default Projects
+
 
 
 

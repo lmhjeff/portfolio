@@ -27,10 +27,6 @@ type Props = {
 }
 
 const Home = ({ pageInfo, experiences, socials, skills, projects }: Props) => {
-    useEffect(() => {
-        console.log(pageInfo)
-    }, [])
-
     return (
         <div
             className="bg-[rgb(36,36,36)] text-white h-screen snap snap-mandatory overflow-y-scroll 
@@ -71,13 +67,13 @@ const Home = ({ pageInfo, experiences, socials, skills, projects }: Props) => {
                 <Contact />
             </section>
 
-            <Link href="#hero">
-                <footer className="sticky bottom-10 w-full cursor-pointer">
+            <a href="#hero">
+                <footer className="sticky bottom-24 w-full cursor-pointer">
                     <div className="flex items-center justify-center">
                         <ChevronDoubleUpIcon className="w-7 h-7 rounded-full cursor-pointer filter text-gray-300 hover:text-white" />
                     </div>
                 </footer>
-            </Link>
+            </a>
         </div>
     )
 }
@@ -102,6 +98,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         revalidate: 10,
     }
 }
+
+
+
+
 
 
 

@@ -7,12 +7,8 @@ type Props = {
 }
 
 const ExperienceCard = ({ experience }: Props) => {
-    console.log(
-        'experience',
-        experience.technologies.map((tech) => console.log(tech.image)),
-    )
     return (
-        <article className="md:snap-center bg-[#292929] h-full md:p-10 flex flex-col rounded-l items-center space-y-5 flex-shrink-0 w-[300px] sm:w-[500px] md:w-[600px] xl:w-[900px] cursor-pointer transition-opacity duration-200 opacity-40 hover:opacity-100">
+        <article className="snap-center max-h-screen h-full md:h-full bg-[#292929] md:p-10 flex flex-col rounded-l items-center space-y-3 flex-shrink-0 w-[300px] sm:w-[500px] md:w-[600px] xl:w-[900px] cursor-pointer transition-opacity duration-200 opacity-40 hover:opacity-100">
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.2 }}
@@ -38,7 +34,7 @@ const ExperienceCard = ({ experience }: Props) => {
                     {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
                 </p>
 
-                <ul className="list-disc list-inside space-y-4 ml-5 text-lg h-96 w-4/5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#048a81]">
+                <ul className="list-disc list-inside space-y-4 ml-5 text-lg h-64 w-4/5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#048a81]">
                     {experience.points.map((point, i) => (
                         <li key={i}>{point}</li>
                     ))}
@@ -49,6 +45,49 @@ const ExperienceCard = ({ experience }: Props) => {
 }
 
 export default ExperienceCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
