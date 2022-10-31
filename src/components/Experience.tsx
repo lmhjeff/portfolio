@@ -20,7 +20,7 @@ const WorkExperience = ({ experiences }: Props) => {
             }}
             className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full px-10 
             justify-evenly mx-auto items-center">
-            <h3 className="absolute top-0 uppercase tracking-[20px] text-gray-500 text-2xl">Experience</h3>
+            <h3 className="absolute top-0 md:-top-2 uppercase tracking-[20px] text-gray-500 text-2xl">Experience</h3>
 
             <div className="w-full mt-12 md:mt-0 flex space-x-5 overflow-x-scroll p-0 md:p-10 snap-x snap-mandatory scrollbar-thin scroll-track-gray-400/20 scrollbar-thumb-[#048a81]">
                 {experiences.map((experience) => (
@@ -32,6 +32,10 @@ const WorkExperience = ({ experiences }: Props) => {
 }
 
 export default WorkExperience
+
+
+
+
 
 
 
