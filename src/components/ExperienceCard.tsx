@@ -8,7 +8,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
     return (
-        <article className="snap-center max-h-screen h-full md:h-full bg-[#292929] md:p-10 flex flex-col rounded-l items-center space-y-3 flex-shrink-0 w-[300px] sm:w-[500px] md:w-[600px] xl:w-[900px] cursor-pointer transition-opacity duration-200 opacity-40 hover:opacity-100">
+        <article className="snap-center max-h-screen h-full md:h-full bg-[#292929] md:p-10 flex flex-col rounded-l items-center space-y-3 flex-shrink-0 w-[300px] sm:w-[500px] md:w-[600px] cursor-pointer transition-opacity duration-200 opacity-40 hover:opacity-100">
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.2 }}
@@ -47,6 +47,7 @@ const ExperienceCard = ({ experience }: Props) => {
 }
 
 export default ExperienceCard
+
 
 
 
