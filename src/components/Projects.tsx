@@ -41,7 +41,7 @@ const Projects = ({ projects }: Props) => {
                                 }}
                                 viewport={{ once: true }}
                                 src={urlFor(project.image).url()}
-                                className="lg:max-w-[1200px] w-full object-contain"
+                                className="lg:max-w-[50%] object-contain"
                             />
                             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                                 <h4 className="text-3xl md:text-4xl font-semibold text-center">
@@ -77,6 +77,10 @@ const Projects = ({ projects }: Props) => {
 }
 
 export default Projects
+
+
+
+
 
 
 
