@@ -30,8 +30,10 @@ const ExperienceCard = ({ experience }: Props) => {
                     )}
                 </div>
                 <p className="uppercase py-5 text-gray-300">
-                    {new Date(experience.dateStarted).toDateString()} -{' '}
-                    {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
+                    {new Date(experience.dateStarted).toDateString().substring(4)} -{' '}
+                    {experience.isCurrentlyWorkingHere
+                        ? 'Present'
+                        : new Date(experience.dateEnded).toDateString().substring(4)}
                 </p>
 
                 <ul className="list-disc list-inside space-y-4 ml-5 text-lg h-64 w-4/5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#048a81]">
@@ -45,6 +47,8 @@ const ExperienceCard = ({ experience }: Props) => {
 }
 
 export default ExperienceCard
+
+
 
 
 
