@@ -18,12 +18,12 @@ const Contact = () => {
     return (
         <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
             <h3 className="absolute top-12 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Contact</h3>
-            <div className="flex flex-col space-y-10 items-center">
+            <div className="flex flex-col space-y-7 items-center">
                 <h4 className="text-4xl font-semibold text-center">
                     I have got just what you need.{' '}
                     <span className="decoration-[#06d6a0] underline">Let&apos;s Talk.</span>
                 </h4>
-                <div className="space-y-10">
+                <div className="space-y-7">
                     <div className="flex items-center space-x-5 justify-center">
                         <PhoneIcon className="text-[#06d6a0] h-7 w-7 animate-pulse" />
                         <p>+852 62373810</p>
@@ -49,6 +49,8 @@ const Contact = () => {
 }
 
 export default Contact
+
+
 
 
 
